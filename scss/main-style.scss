@@ -97,5 +97,39 @@ a {
         margin-bottom: 25px;
     }
 }
+.video {
+    background: url('../../img/optimize/trailer-bg.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    text-align: right;
+}
+.video__title {
+    padding-top: 385px;
+    margin-bottom: 45px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 84px;
+    color: $link-hover-color;
+    span {
+        display: block;
+        padding-right: 295px;
+    }
+}
+.video_btn {
+    padding-left: 112px;
+    position: relative;
+    left: -235px;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 0;
+        top: -38px;
+        background-image: url('../../img/optimize/svg/youtube-play-button.svg');
+    }
+}
 
 @import "./media-queries.scss";

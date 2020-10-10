@@ -33,6 +33,21 @@ a {
     font-size: 36px;
     line-height: 42px;
 }
+.numbers-of-series {
+    &::before {
+        z-index: -1;
+        font-weight: bold;
+        font-size: 96px;
+        line-height: 112px;
+        color: #600E09;
+    }
+}
+.watch-link {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    background: $main-bg;
+}
 
 .header {
     height: 100vh;
@@ -130,6 +145,53 @@ a {
         top: -38px;
         background-image: url('../../img/optimize/svg/youtube-play-button.svg');
     }
+}
+.seasons__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 100px 75px;
+    counter-reset: number;
+}
+.seasons__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    height: 250px;
+    background-position: center center;
+    background-size: cover;
+    &::before {
+        content: '0'counter(number);
+        counter-increment: number;
+        position: absolute;
+        left: 0;
+        top: -72px;
+    }
+    &:hover .seasons__link{
+        opacity: 1;
+    }
+    &:hover::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        animation: show-overlay .25s ease-out forwards;
+    }
+}
+@keyframes show-overlay {
+    to {
+        background: rgba(14, 14, 14, 0.8);
+    }
+}
+.seasons__link {
+    opacity: 0;
+    transition: .25s ease-out;
+    padding: 12px 78px 11px;
+    z-index: 2;
 }
 
 @import "./media-queries.scss";

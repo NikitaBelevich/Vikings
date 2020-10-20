@@ -1,0 +1,45 @@
+
+.menu__list-link_active {
+    color: $link-hover-color;
+    text-decoration: underline;
+}
+.header-seasons-pages {
+    position: relative;
+    height: 85vh;
+    background: url('../../img/optimize/img-seasons/season-1-bg.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.season-info {
+    max-width: 1385px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 44px 47px 64px 35px;
+    background-color: $main-bg;
+}
+.season-info__num {
+    text-align: center;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 64px;
+    color: #FFFFFF;
+    & span {
+        display: block;
+        font-size: 36px;
+        line-height: 25px;
+    }
+}
+.season-info__description {
+    margin-left: 45px;
+    p {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+.series {
+    padding: 100px 0 160px;
+}

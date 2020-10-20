@@ -147,6 +147,7 @@ a {
     }
 }
 .seasons__inner {
+    padding-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -245,5 +246,9 @@ a {
     padding: 15px 0 15px;
     text-align: center;
 }
+
+/* season 1 start */
+@import "./season-pages.scss";
+/* season 1 end */ 
 
 @import "./media-queries.scss";

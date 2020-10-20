@@ -67,6 +67,13 @@ a {
   transform: rotate(180deg);
 }
 
+.menu {
+  padding: 50px 0 58px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#111213), color-stop(43.62%, #111213), color-stop(86.33%, rgba(32, 31, 33, 0)));
+  background: -o-linear-gradient(top, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
+  background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,10 +81,6 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 50px 0 58px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#111213), color-stop(43.62%, #111213), color-stop(86.33%, rgba(32, 31, 33, 0)));
-  background: -o-linear-gradient(top, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
-  background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
 }
 
 .menu__list-item {
@@ -312,6 +315,17 @@ a {
 .menu__list-link_active {
   color: #85CCDC;
   text-decoration: underline;
+}
+
+.menu-container {
+  position: relative;
+  max-width: 1385px;
+  margin: 0 auto;
+}
+
+.page-logo {
+  position: absolute;
+  left: 0;
 }
 
 .header-seasons-pages {

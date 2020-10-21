@@ -209,6 +209,10 @@ a {
   top: -72px;
 }
 
+.seasons__item:nth-child(n+10)::before {
+  content: counter(number);
+}
+
 .seasons__item:hover .seasons__link {
   opacity: 1;
 }

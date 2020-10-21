@@ -172,6 +172,9 @@ a {
         left: 0;
         top: -72px;
     }
+    &:nth-child(n+10)::before {
+        content: counter(number);
+    }
     &:hover .seasons__link{
         opacity: 1;
     }

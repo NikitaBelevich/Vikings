@@ -2,11 +2,19 @@
 
 @import "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&display=swap";
 
+$maket-width: 1680;
 $main-bg: #0E0E0E;
 $font-color: #fff;
 $link-hover-color: #85CCDC;
 $default-font-size: 18px;
 $default-line-height: 21px;
+
+@mixin adaptive-font($minSize, $initSize, $screenWidth: $maket-width) {
+    font-size: calc(#{$minSize + px} + #{$initSize - $minSize} * ((100vw - 320px) / #{$screenWidth - 320}));
+    // $minSize минимальный размер шрифта
+    // $initSize размер шрифта по макету
+    // $screenWidth ширина экрана по макету
+}
 
 body {
     background-color: $main-bg;

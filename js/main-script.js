@@ -1,5 +1,15 @@
 'use strict';
 
+// Исправление бага с vh на моб.устройствах, где интерфейс браузера может забирать от 100vh
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+// Исправление бага с vh на моб.устройствах, где интерфейс браузера может забирать от 100vh
+
 $('[data-fancybox]').fancybox({
     youtube : {
         autoplay: 0,

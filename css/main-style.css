@@ -25,7 +25,7 @@ a {
 .title {
   text-align: center;
   margin-bottom: 100px;
-  font-size: 36px;
+  font-size: calc(28px + 8 * ((100vw - 320px) / 1360));
   line-height: 42px;
 }
 
@@ -46,6 +46,7 @@ a {
 
 .header {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: url("../../img/optimize/header-bg.jpg") no-repeat;
   background-position: center 50px;
   background-size: cover;
@@ -75,9 +76,7 @@ a {
 }
 
 .menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -88,7 +87,7 @@ a {
 }
 
 .menu__list-link {
-  font-size: 36px;
+  font-size: calc(20px + 16 * ((100vw - 320px) / 1360));
   line-height: 42px;
 }
 
@@ -98,7 +97,7 @@ a {
 }
 
 .logo {
-  margin: 178px;
+  margin-top: 19vh;
 }
 
 .about__wrapper {
@@ -142,18 +141,18 @@ a {
 }
 
 .video__title {
-  padding-top: 385px;
+  padding-top: 41vh;
   margin-bottom: 45px;
   font-style: italic;
   font-weight: 300;
-  font-size: 72px;
+  font-size: calc(32px + 40 * ((100vw - 320px) / 1360));
   line-height: 84px;
   color: #85CCDC;
 }
 
 .video__title span {
   display: block;
-  padding-right: 295px;
+  padding-right: 17.5vw;
 }
 
 .video_btn {
@@ -176,10 +175,7 @@ a {
   padding-top: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 100px 75px;
   counter-reset: number;
 }
@@ -195,10 +191,10 @@ a {
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: 350px;
   height: 250px;
-  background-position: center center;
-  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
 }
 
 .seasons__item::before {
@@ -264,7 +260,7 @@ a {
 }
 
 .hero-image {
-  min-width: 775px;
+  max-width: 775px;
   max-height: 450px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -285,7 +281,7 @@ a {
   margin-bottom: 60px;
   font-style: italic;
   font-weight: 300;
-  font-size: 72px;
+  font-size: calc(32px + 40 * ((100vw - 320px) / 1360));
   line-height: 53px;
   color: #85CCDC;
 }
@@ -382,6 +378,142 @@ a {
 }
 
 /* season 1 end */
+@media screen and (max-width: 1366px) {
+  .logo__img {
+    width: 50%;
+  }
+  .about__info {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .video__title {
+    line-height: 58px;
+  }
+  .heroes__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .heroes__slider-img {
+    max-width: 80%;
+    max-height: 100%;
+  }
+  .hero-image {
+    max-width: 80%;
+    max-height: 100%;
+    -o-object-position: 0% 0%;
+    object-position: 0% 0%;
+  }
+  .heroes__slider-text {
+    margin-top: 50px;
+    max-width: 80%;
+  }
+  .hero-name {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .seasons__item {
+    height: 348px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .video_btn {
+    left: 0;
+    padding-left: 61px;
+  }
+  .video_btn::after {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    left: 0;
+    top: -14px;
+  }
+  .heroes__slider-img {
+    max-width: 100%;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    margin-top: 24vh;
+  }
+  .about__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .section-page {
+    padding: 50px 0;
+  }
+  .title {
+    margin-bottom: 50px;
+  }
+  .video__title {
+    line-height: 40px;
+    margin-bottom: 22px;
+  }
+  .seasons__inner {
+    grid-gap: 75px 35px;
+  }
+  .seasons__item {
+    height: 238px;
+  }
+  .watch-link {
+    font-size: 30px;
+  }
+  .heroes__slider-text {
+    margin-top: 25px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .seasons__item {
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .section-page {
+    padding: 25px 0;
+  }
+  .title {
+    margin-bottom: 25px;
+  }
+}
+
 @media screen and (max-width: 820px) and (max-height: 420px) {
   /* landscape orientation moobile */
+}
+
+@media screen and (max-width: 420px) {
+  .seasons__item {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  body {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .seasons__inner {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  .seasons__item {
+    height: 240px;
+  }
 }

@@ -37,3 +37,10 @@ $('.heroes__slider-text').slick({
     draggable : false,
     asNavFor: '.heroes__slider-img',
 });
+
+const menuNav = document.querySelector('nav.menu');
+const menuList = document.querySelector('ul.menu__list');
+const mobileMenuBtn = document.querySelector('#menu33');
+mobileMenuBtn.addEventListener('click', () => {
+    menuList.classList.toggle('menu__list_active');
+});

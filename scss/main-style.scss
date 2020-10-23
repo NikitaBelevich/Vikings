@@ -83,6 +83,7 @@ a {
 // mobile button style start
 .menu__mobile-btn {
     display: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     input {
         display: none;
@@ -164,6 +165,9 @@ a {
 }
 .logo {
     padding-top: 19vh;
+}
+.page-logo {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .about__wrapper {
     display: flex;

@@ -78,6 +78,7 @@ a {
 
 .menu__mobile-btn {
   display: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .menu__mobile-btn input {
@@ -186,6 +187,10 @@ a {
 
 .logo {
   padding-top: 19vh;
+}
+
+.page-logo {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .about__wrapper {

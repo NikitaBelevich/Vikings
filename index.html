@@ -137,11 +137,11 @@
             <div class="heroes__inner">
                 <div class="heroes__slider-img">
                     <img class="hero-image" src="./img/optimize/heroes/ragnar.jpg" alt="">
-                    <img class="hero-image" src="./img/optimize/heroes/lagerta.jpg" alt="">
-                    <img class="hero-image" src="./img/optimize/heroes/rollo.jpg" alt="">
-                    <img class="hero-image" src="./img/optimize/heroes/björn.jpg" alt="">
-                    <img class="hero-image" src="./img/optimize/heroes/floki.jpg" alt="">
-                    <img class="hero-image" src="./img/optimize/heroes/torunn.jpg" alt="">
+                    <img class="hero-image lazyload" src="" data-src="./img/optimize/heroes/lagerta.jpg" alt="">
+                    <img class="hero-image lazyload" src="" data-src="./img/optimize/heroes/rollo.jpg" alt="">
+                    <img class="hero-image lazyload" src="" data-src="./img/optimize/heroes/björn.jpg" alt="">
+                    <img class="hero-image lazyload" src="" data-src="./img/optimize/heroes/floki.jpg" alt="">
+                    <img class="hero-image lazyload" src="" data-src="./img/optimize/heroes/torunn.jpg" alt="">
                 </div>
                 <div class="heroes__slider-text">
                     <div class="hero-text">
@@ -218,6 +218,7 @@
     </footer> 
     
     <!-- Libraries -->
+    <script src="./js/intersectionObserberAPI.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <script src="./js/min/jquery.fancybox.min.js" defer></script>
     <script src="./js/min/slick.min.js" defer></script>

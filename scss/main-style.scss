@@ -15,6 +15,17 @@ $default-line-height: 21px;
     // $initSize размер шрифта по макету
     // $screenWidth ширина экрана по макету
 }
+.lazyload {
+    // Обязательно все картинки ленивой загрузки должны быть блочными
+    // display: block; 
+    opacity: 0;
+    // transform: scale(1.1);
+    
+}
+.lazyload_show {
+    opacity: 1 !important;
+    // transform: scale(1) !important;
+}
 
 body {
     background-color: $main-bg;
@@ -292,6 +303,7 @@ a {
     max-height: 450px;
     object-fit: cover;
     object-position: 0% 12%;
+    // transition: opacity .3s ease-out; // для lazyload
 }
 .heroes__slider-text {
     max-width: 350px;

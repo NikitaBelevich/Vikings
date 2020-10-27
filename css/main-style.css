@@ -234,7 +234,7 @@ a {
 }
 
 .video {
-  background: url("../../img/optimize/trailer-bg.jpg") no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 100vh;

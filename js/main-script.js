@@ -57,3 +57,12 @@ const sliderOptionObserver = {
 // Начинаем следить за нашей группой изображений.
 observeGroupOfImages(sliderImages, sliderOptionObserver);
 
+
+$(function() {
+    $('.lazy-bg').lazy({
+        name: 'lazy-bg',
+        effect: 'fadeIn',
+        effectTime: 400,
+        threshold: 200
+    });
+});

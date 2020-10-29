@@ -28,12 +28,12 @@ mobileMenuBtn.addEventListener('click', () => {
 
 
 // Получаем картинки с классом .lazyload в слайдере
-const sliderImages = document.querySelectorAll('.heroes__slider-img img.lazyload');
+const sliderImages = document.querySelectorAll('.heroes__slider-picture img.lazyload');
 // Задали настройки для нашего Observer слайдера
 const sliderOptionObserver = {
     root: document.querySelector('.heroes__slider-img'),
     rootMargin: '0px 0px 0px 0px',
-    threshold: 0.001 // параметр характеризующий при каком проценте видимости целевого элемента сработает callback
+    threshold: 0.2 // параметр характеризующий при каком проценте видимости целевого элемента сработает callback
 };
 // Начинаем следить за нашей группой изображений.
 observeGroupOfImages(sliderImages, sliderOptionObserver);

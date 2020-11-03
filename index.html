@@ -8,9 +8,10 @@
     <meta name="description" content="Description">
     <title>Vikings</title>
     
-    <link rel="stylesheet" href="./css/min/my_normalize-min.css">
-    <link rel="stylesheet" href="./css/min/slick-min.css">
-    <link rel="stylesheet" href="./css/min/jquery.fancybox-min.css">
+    <!-- Асинхронная загрузка стилей библиотек -->
+    <link rel="preload" href="./css/min/my_normalize-min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./css/min/slick-min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./css/min/jquery.fancybox-min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="./css/min/main-style-min.css">
 </head>
 <body>
